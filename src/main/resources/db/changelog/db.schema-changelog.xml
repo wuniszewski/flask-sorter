@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="1001" author="wuniszewski">
+        <createTable tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID" type="UUID">
+                <constraints primaryKey="true" primaryKeyName="FLASK_MODEL_ID_PK" />
+            </column>
+            <column name="PATIENT_AGE" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PATIENT_COMPANY_NAME" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PATIENT_CITY_DISTRICT" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PATIENT_VISION_DEFECT" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+
+            </column>
+            <column name="RACK_MODEL_ID" type="UUID">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <createTable tableName="RACK_MODEL">
+            <column name="RACK_MODEL_ID" type="UUID">
+                <constraints primaryKey="true" primaryKeyName="RACK_MODEL_ID_PK" nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="FLASK_MODEL" baseColumnNames="RACK_MODEL_ID" constraintName="FK_RACK_MODEL_ID" referencedTableName="RACK_MODEL"
+                                 referencedColumnNames="RACK_MODEL_ID"/>
+    </changeSet>
+</databaseChangeLog>

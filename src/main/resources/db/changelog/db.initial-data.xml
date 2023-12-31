@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="initial/test-data" author="wuniszewski">
+        <insert tableName="RACK_MODEL"><column name="RACK_MODEL_ID">0deda21c-71ab-43c7-82a2-01e7dd7ec45f</column></insert>
+        <insert tableName="RACK_MODEL"><column name="RACK_MODEL_ID">ef602689-f2ec-4629-996a-f9ccd529e08d</column></insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">381ed7a9-579c-4fa0-8f36-23c8a562699b</column>
+            <column name="PATIENT_AGE">10</column>
+            <column name="PATIENT_COMPANY_NAME">PCN1</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD1</column>
+            <column name="PATIENT_VISION_DEFECT">PVD1</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">b73ab205-db62-4282-851a-9d2fff37c380</column>
+            <column name="PATIENT_AGE">10</column>
+            <column name="PATIENT_COMPANY_NAME">PCN2</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD2</column>
+            <column name="PATIENT_VISION_DEFECT">PVD2</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">00fc266b-ac1d-4a09-8f1e-1287c077cb68</column>
+            <column name="PATIENT_AGE">30</column>
+            <column name="PATIENT_COMPANY_NAME">PCN2</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD3</column>
+            <column name="PATIENT_VISION_DEFECT">PVD3</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">7c557e4e-c31e-4583-a5b0-1ccb805237c2</column>
+            <column name="PATIENT_AGE">40</column>
+            <column name="PATIENT_COMPANY_NAME">PCN4</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD3</column>
+            <column name="PATIENT_VISION_DEFECT">PVD4</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">70f79ce9-32a8-4e80-9a83-49c267b9cd55</column>
+            <column name="PATIENT_AGE">50</column>
+            <column name="PATIENT_COMPANY_NAME">PCN5</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD5</column>
+            <column name="PATIENT_VISION_DEFECT">PVD4</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">879f2fe8-1c48-4e8f-bb2b-06031b363f95</column>
+            <column name="PATIENT_AGE">60</column>
+            <column name="PATIENT_COMPANY_NAME">PCN6</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD6</column>
+            <column name="PATIENT_VISION_DEFECT">PVD6</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">e0f535b0-df5a-4d66-9925-530d695498bc</column>
+            <column name="PATIENT_AGE">60</column>
+            <column name="PATIENT_COMPANY_NAME">PCN6</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD6</column>
+            <column name="PATIENT_VISION_DEFECT">PVD6</column>
+        </insert>
+        <insert tableName="FLASK_MODEL">
+            <column name="FLASK_MODEL_ID">b1a6980d-1f8f-4950-84ab-5cc5e61081ab</column>
+            <column name="PATIENT_AGE">60</column>
+            <column name="PATIENT_COMPANY_NAME">PCN6</column>
+            <column name="PATIENT_CITY_DISTRICT">PCD6</column>
+            <column name="PATIENT_VISION_DEFECT">PVD6</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
